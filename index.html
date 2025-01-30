@@ -1,1 +1,41 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c2{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c2 doc-content"><p class="c0"><span class="c1">&lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;title&gt;Rabbit Says Game&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Rabbit Says Game&lt;/h1&gt; &lt;p&gt;Loading the game...&lt;/p&gt;&lt;script src=&quot;rabbit-game.js&quot;&gt;&lt;/script&gt;&lt;/body&gt; &lt;/html&gt;</span></p></body></html>
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הארנב אומר</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .button-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; justify-content: center; margin-top: 20px; width: 220px; margin-left: auto; margin-right: auto; }
+        .button { 
+            width: 100px; 
+            height: 100px; 
+            aspect-ratio: 1 / 1;
+            border-radius: 50%; 
+            border: 2px solid black; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            transition: background-color 0.3s; 
+            background-color: white;
+        }
+        .active { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <h1>הארנב אומר</h1>
+    <p id="message">לחצו על "התחילו" כדי לשחק</p>
+    <p id="counter">שלב: 0</p>
+    <button id="start" style="margin: 20px auto; display: block;">התחילו</button>
+    <div class="button-container">
+        <div class="button" data-action="לקפוץ במקום" data-color="red">לקפוץ במקום</div>
+        <div class="button" data-action="לנענע את האף" data-color="blue">לנענע את האף</div>
+        <div class="button" data-action="לשקשק זנב" data-color="green">לשקשק זנב</div>
+        <div class="button" data-action="להרים אוזניים" data-color="orange">להרים אוזניים</div>
+    </div>
+
+    <!-- Load the external JavaScript file -->
+    <script src="rabbit-game.js"></script>
+</body>
+</html>
